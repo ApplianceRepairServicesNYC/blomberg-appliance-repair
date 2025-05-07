@@ -43,22 +43,22 @@
         {
           "@type": "City",
           "name": "Manhattan",
-          "sameAs": "https://en.wikipedia.org/wiki/Manhattan"
+          "sameAs": "https://blombergappliancerepairnyc.com/manhattan-ny-index.html"
         },
         {
           "@type": "City",
           "name": "Brooklyn",
-          "sameAs": "https://en.wikipedia.org/wiki/Brooklyn"
+          "sameAs": "https://blombergappliancerepairnyc.com/brooklyn-ny-index.html"
         },
         {
           "@type": "City",
           "name": "Bronx",
-          "sameAs": "https://en.wikipedia.org/wiki/The_Bronx"
+          "sameAs": "https://blombergappliancerepairnyc.com/bronx-ny-index.html"
         },
         {
           "@type": "City",
           "name": "Queens",
-          "sameAs": "https://en.wikipedia.org/wiki/Queens"
+          "sameAs": "https://blombergappliancerepairnyc.com/queens-ny-index.html"
         }
       ],
       "openingHoursSpecification": [
@@ -146,23 +146,17 @@
             .services-grid {grid-template-columns: 1fr;}
         }
         .service-item {display: flex; flex-direction: column; align-items: center; gap: 0.5rem; width: 100%;}
-        .cta-button {display: inline-block; padding: 0.8rem 1.8rem; background: linear-gradient(45deg, #1E3A8A, #3B82F6); color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; margin: 0.5rem; border: 1px solid #FFD700; box-shadow: 0 0 5px rgba(255, 215, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2); cursor: pointer;}
+        .cta-button {display: inline-block; padding: 0.8rem 1.8rem; background: linear-gradient(45deg, #1E3A8A, #3B82F6); color: #FFFFFF; font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; margin: 0.5rem; border: 1px solid #FFD700; box-shadow: 0 0 5px rgba(255, 215, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);}
         .cta-button:hover {background: linear-gradient(45deg, #1E40AF, #06B6D4); transform: scale(1.05); box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 15px rgba(0, 183, 255, 0.5); animation: pulse 1.5s infinite;}
-        .cta-button.active {background: linear-gradient(45deg, #1E40AF, #06B6D4);}
         @keyframes pulse {0% {box-shadow: 0 0 0 0 rgba(0, 183, 255, 0.5);} 70% {box-shadow: 0 0 0 10px rgba(0, 183, 255, 0);} 100% {box-shadow: 0 0 0 0 rgba(0, 183, 255, 0);}}
-        .section-content {display: none; margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #E0F7FA, #F0F9FF); border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); position: relative;}
-        .section-content.active {display: block;}
-        .section-content p {font-size: 1rem; margin-bottom: 1rem;}
         @media (max-width: 768px) {
             .section {padding: 1.5rem;}
             .section h2 {font-size: 1.8rem;}
-            .section-content p {font-size: 0.9rem;}
             .cta-button {padding: 0.75rem 1.5rem; font-size: 0.9rem;}
         }
         @media (max-width: 480px) {
             .section {padding: 1rem;}
             .section h2 {font-size: 1.5rem;}
-            .section-content p {font-size: 0.85rem;}
             .cta-button {padding: 0.75rem 1.5rem; font-size: 0.9rem;}
         }
         footer {background: linear-gradient(45deg, #1E3A8A, #06B6D4, #3B82F6); background-size: 200% 200%; color: #FFFFFF; padding: 3rem 0; margin-top: 2rem; border-top: 3px solid #06B6D4; font-family: 'Inter', sans-serif; animation: shimmer 5s ease infinite;}
@@ -287,32 +281,16 @@
                 <h2>Our Service Areas</h2>
                 <div class="services-grid">
                     <div class="service-item">
-                        <button class="cta-button" onclick="toggleSection('manhattanContent')" aria-label="Toggle Manhattan service details">Manhattan</button>
-                        <div class="section-content" id="manhattanContent">
-                            <p>Expert appliance repair in Manhattan, including refrigerators, washers, dryers, and more. Serving neighborhoods like Chelsea, Upper East Side, and Tribeca with same-day service.</p>
-                            <p><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html">View Manhattan Neighborhoods</a> or call <a href="tel:+17187171706">(718) 717-1706</a> to schedule your repair.</p>
-                        </div>
+                        <a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="cta-button" aria-label="Visit Manhattan service area page">Manhattan</a>
                     </div>
                     <div class="service-item">
-                        <button class="cta-button" onclick="toggleSection('brooklynContent')" aria-label="Toggle Brooklyn service details">Brooklyn</button>
-                        <div class="section-content" id="brooklynContent">
-                            <p>Reliable appliance repair in Brooklyn, covering washers, dryers, ovens, and refrigerators. We serve Williamsburg, Park Slope, and more with fast, professional service.</p>
-                            <p><a href="https://blombergappliancerepairnyc.com/brooklyn-ny-index.html">View Brooklyn Neighborhoods</a> or call <a href="tel:+17187171706">(718) 717-1706</a> to schedule your repair.</p>
-                        </div>
+                        <a href="https://blombergappliancerepairnyc.com/brooklyn-ny-index.html" class="cta-button" aria-label="Visit Brooklyn service area page">Brooklyn</a>
                     </div>
                     <div class="service-item">
-                        <button class="cta-button" onclick="toggleSection('bronxContent')" aria-label="Toggle Bronx service details">Bronx</button>
-                        <div class="section-content" id="bronxContent">
-                            <p>Fast appliance repair in the Bronx, specializing in refrigerators, dishwashers, and more. Serving Riverdale, Fordham, and other neighborhoods with same-day availability.</p>
-                            <p><a href="https://blombergappliancerepairnyc.com/bronx-ny-index.html">View Bronx Neighborhoods</a> or call <a href="tel:+17187171706">(718) 717-1706</a> to schedule your repair.</p>
-                        </div>
+                        <a href="https://blombergappliancerepairnyc.com/bronx-ny-index.html" class="cta-button" aria-label="Visit Bronx service area page">Bronx</a>
                     </div>
                     <div class="service-item">
-                        <button class="cta-button" onclick="toggleSection('queensContent')" aria-label="Toggle Queens service details">Queens</button>
-                        <div class="section-content" id="queensContent">
-                            <p>Professional appliance repair in Queens, including wine coolers, microwaves, and washers. We cover Astoria, Flushing, and more with expert, same-day service.</p>
-                            <p><a href="tel:+17187171706">Call (718) 717-1706</a> to schedule your repair in Queens.</p>
-                        </div>
+                        <a href="https://blombergappliancerepairnyc.com/queens-ny-index.html" class="cta-button" aria-label="Visit Queens service area page">Queens</a>
                     </div>
                 </div>
             </section>
@@ -420,20 +398,6 @@
                 currentLink.setAttribute('aria-current', 'page');
             }
         });
-
-        function toggleSection(id) {
-            document.querySelectorAll('.section-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            document.querySelectorAll('.cta-button').forEach(button => {
-                button.classList.remove('active');
-            });
-
-            const content = document.getElementById(id);
-            content.classList.toggle('active');
-            const button = content.previousElementSibling;
-            button.classList.toggle('active');
-        }
     </script>
 </body>
 </html>
