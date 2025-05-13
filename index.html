@@ -1,3 +1,19 @@
+To remove the second "Learn More" button from the "Blomberg Washer Repair Service" section while keeping everything else the same, you need to delete the following part of the HTML code:
+
+```html
+<!-- Add a new dropdown for "Learn More" content -->
+<button class="cta-button" onclick="toggleDropdown('washingMachineLearnMore')">Learn More</button>
+<div id="washingMachineLearnMore" class="dropdown-content" style="display: none;">
+    <h3>Benefits of a Front Load Washer</h3>
+    <p>Front load washers are known for their efficiency and gentle handling of clothes. They use less water and energy compared to top load washers, making them an eco-friendly choice. Additionally, front load washers are stackable, saving space in your laundry room.</p>
+    <p>People generally purchase front load washers for their advanced features, such as steam cleaning, multiple wash cycles, and larger capacity. These washers are ideal for families and individuals who want to save on utility bills while enjoying superior cleaning performance.</p>
+    <!-- Add more content as needed -->
+</div>
+```
+
+Here's the modified HTML code with the second "Learn More" button removed:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -375,6 +391,7 @@
             font-size: 2rem;
             margin-bottom: 0.5rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            color: #FFFFFF; /* Change text color to white */
         }
         .contact-form-section .expect-text {
             text-align: center;
@@ -1194,6 +1211,17 @@
                 </div>
             </section>
 
+            <section class="section" id="guarantee-policy" role="region" aria-label="Guarantee Policy">
+                <h2>100% Or Your Money Back Guaranteed Policy</h2>
+                <button class="cta-button" onclick="toggleSection('guaranteePolicyContent')" aria-label="Toggle guarantee policy content">View Policy</button>
+                <div class="section-content" id="guaranteePolicyContent">
+                    <p>We understand the frustration of dealing with companies that charge for repairs they can’t complete or lack the expertise to get the job done right. At Blomberg Appliance Repair Service Of New York, we believe in <em>honest, reliable service</em> you can trust. That’s why we offer a <strong>100% Money-Back Guarantee</strong>.</p>
+                    <p>If we are unable to complete your appliance repair due to our own limitations or lack of expertise, you will receive a full refund—no questions asked. You should only pay for real results, not failed attempts.</p>
+                    <p>We stand by our work, and your satisfaction is our top priority.</p>
+                </div>
+            </section>
+
+            <!-- Contact form section moved to the end -->
             <section class="section" id="contact" role="region" aria-label="Contact Us">
                 <div class="modal-overlay" id="modalOverlay"></div>
                 <div class="modal" id="successModal" role="dialog" aria-labelledby="modalMessage" aria-hidden="true">
@@ -1253,16 +1281,6 @@
                     </form>
                 </div>
             </section>
-
-            <section class="section" id="guarantee-policy" role="region" aria-label="Guarantee Policy">
-                <h2>100% Or Your Money Back Guaranteed Policy</h2>
-                <button class="cta-button" onclick="toggleSection('guaranteePolicyContent')" aria-label="Toggle guarantee policy content">View Policy</button>
-                <div class="section-content" id="guaranteePolicyContent">
-                    <p>We understand the frustration of dealing with companies that charge for repairs they can’t complete or lack the expertise to get the job done right. At Blomberg Appliance Repair Service Of New York, we believe in <em>honest, reliable service</em> you can trust. That’s why we offer a <strong>100% Money-Back Guarantee</strong>.</p>
-                    <p>If we are unable to complete your appliance repair due to our own limitations or lack of expertise, you will receive a full refund—no questions asked. You should only pay for real results, not failed attempts.</p>
-                    <p>We stand by our work, and your satisfaction is our top priority.</p>
-                </div>
-            </section>
         </main>
 
         <footer role="contentinfo">
@@ -1290,16 +1308,16 @@
                     <h4>Appliance Services</h4>
                     <div class="appliance-services-container">
                         <ul class="appliance-services-list">
-                            <li><a href="#services" class="footer-link">Washing Machine Repair</a></li>
-                            <li><a href="#services" class="footer-link">Dryer Repair</a></li>
+                            <li><a href="#services" class="footer-link">Blomberg Washing Machine Repair</a></li>
+                            <li><a href="#services" class="footer-link">Blomberg Dryer Repair</a></li>
                             <li><a href="#services" class="footer-link">Blomberg Oven/Stove Repair Service</a></li>
-                            <li><a href="#services" class="footer-link">Dishwasher Repair</a></li>
+                            <li><a href="#services" class="footer-link">Blomberg Dishwasher Repair</a></li>
                         </ul>
                         <ul class="appliance-services-list">
-                            <li><a href="#services" class="footer-link">Refrigerator Repair</a></li>
-                            <li><a href="#services" class="footer-link">Wine Coolers</a></li>
-                            <li><a href="#services" class="footer-link">Microwave Repair</a></li>
-                            <li><a href="#services" class="footer-link">Cooktop Repair</a></li>
+                            <li><a href="#services" class="footer-link">Blomberg Refrigerator Repair</a></li>
+                            <li><a href="#services" class="footer-link">Blomberg Wine Coolers</a></li>
+                            <li><a href="#services" class="footer-link">Blomberg Microwave Repair</a></li>
+                            <li><a href="#services" class="footer-link">Blomberg Cooktop Repair</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1547,3 +1565,6 @@
     </script>
 </body>
 </html>
+```
+
+This change removes the second "Learn More" button and its associated content from the "Blomberg Washer Repair Service" section while keeping everything else the same.
