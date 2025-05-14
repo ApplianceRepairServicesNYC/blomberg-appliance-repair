@@ -552,38 +552,6 @@
                 font-size: 0.8rem;
             }
         }
-
-        /* Map Container Styles */
-        .contact-and-map-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        .contact-form-section, .map-container {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .map-container {
-            width: 100%;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 450px;
-        }
-
-        @media (max-width: 768px) {
-            .contact-and-map-container {
-                flex-direction: column;
-            }
-        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -1009,7 +977,7 @@
                         <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Hamilton Heights</span> - 10031</a></div>
                         <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Harlem</span> - 10027</a></div>
                         <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Hell's Kitchen</span> - 10019</a></div>
-                        <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Herald Square</span> - 10018</a></div>
+                        <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Herald Square</span> - 10001</a></div>
                         <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Hudson Heights</span> - 10034</a></div>
                         <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Hudson Square</span> - 10013</a></div>
                         <div class="neighborhood-item"><a href="https://blombergappliancerepairnyc.com/manhattan-ny-index.html" class="neighborhood-link"><span>Inwood</span> - 10034</a></div>
@@ -1244,62 +1212,57 @@
                     <p id="modalMessage">Your email has been sent. A representative will contact you within 30 minutes to schedule your repair!</p>
                     <button class="close-button" id="closeModal" aria-label="Close notification">Close</button>
                 </div>
-                <div class="contact-and-map-container">
-                    <div class="contact-form-section" role="region" aria-label="Contact Us">
-                        <h2 style="color: white;">Contact Blomberg Appliance Repair</h2>
-                        <p class="expect-text">What to Expect: Once you submit your request, a representative will contact you within 30 minutes to discuss available dates, service details, and associated charges before confirming your appointment.</p>
-                        <form id="contactForm" class="contact-form" novalidate>
-                            <div class="form-group">
-                                <label for="name">Name <span aria-hidden="true">*</span></label>
-                                <input type="text" id="name" name="name" placeholder="Your Name" required aria-describedby="nameError" aria-required="true">
-                                <span id="nameError" class="error-message">Please enter your name.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email <span aria-hidden="true">*</span></label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" required aria-describedby="emailError" aria-required="true">
-                                <span id="emailError" class="error-message">Please enter a valid email address.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone <span aria-hidden="true">*</span></label>
-                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{10}" aria-describedby="phoneError" aria-required="true">
-                                <span id="phoneError" class="error-message">Please enter a valid 10-digit phone number.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="address">Address <span aria-hidden="true">*</span></label>
-                                <textarea id="address" name="address" placeholder="Your Address" required aria-describedby="addressError" aria-required="true"></textarea>
-                                <span id="addressError" class="error-message">Please enter your address.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject <span aria-hidden="true">*</span></label>
-                                <select id="subject" name="subject" required aria-describedby="subjectError" aria-required="true">
-                                    <option value="">Select a Subject</option>
-                                    <option value="washer_repair">Washer Repair</option>
-                                    <option value="dryer_repair">Dryer Repair</option>
-                                    <option value="oven_repair">Oven Repair</option>
-                                    <option value="cooktop_repair">Cooktop Repair</option>
-                                    <option value="dishwasher_repair">Dishwasher Repair</option>
-                                    <option value="wine_cooler_repair">Wine Cooler Repair</option>
-                                    <option value="microwave_repair">Microwave Repair</option>
-                                    <option value="refrigerator_repair">Refrigerator Repair</option>
-                                    <option value="hood_vent_repair">Hood Vent Repair</option>
-                                    <option value="installation">Installation</option>
-                                    <option value="maintenance">Maintenance Service</option>
-                                    <option value="multiple_appliances">Multiple Appliances</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <span id="subjectError" class="error-message">Please select a subject.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message <span aria-hidden="true">*</span></label>
-                                <textarea id="message" name="message" placeholder="Your Message" required aria-describedby="messageError" aria-required="true"></textarea>
-                                <span id="messageError" class="error-message">Please enter your message.</span>
-                            </div>
-                            <button type="submit" class="form-button" aria-label="Submit contact form">Send Message</button>
-                        </form>
-                    </div>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.8707726786547!2d-73.98644342397274!3d40.74286897138906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a79dd9d771%3A0xbf3a4b0fba33d68!2s401%20Park%20Ave%20S%2C%20New%20York%2C%20NY%2010016!5e0!3m2!1sen!2sus!4v1747225134832!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                <div class="contact-form-section" role="region" aria-label="Contact Us">
+                    <h2 style="color: white;">Contact Blomberg Appliance Repair</h2>
+                    <p class="expect-text">What to Expect: Once you submit your request, a representative will contact you within 30 minutes to discuss available dates, service details, and associated charges before confirming your appointment.</p>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required aria-describedby="nameError" aria-required="true">
+                            <span id="nameError" class="error-message">Please enter your name.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required aria-describedby="emailError" aria-required="true">
+                            <span id="emailError" class="error-message">Please enter a valid email address.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone <span aria-hidden="true">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{10}" aria-describedby="phoneError" aria-required="true">
+                            <span id="phoneError" class="error-message">Please enter a valid 10-digit phone number.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address <span aria-hidden="true">*</span></label>
+                            <textarea id="address" name="address" placeholder="Your Address" required aria-describedby="addressError" aria-required="true"></textarea>
+                            <span id="addressError" class="error-message">Please enter your address.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject <span aria-hidden="true">*</span></label>
+                            <select id="subject" name="subject" required aria-describedby="subjectError" aria-required="true">
+                                <option value="">Select a Subject</option>
+                                <option value="washer_repair">Washer Repair</option>
+                                <option value="dryer_repair">Dryer Repair</option>
+                                <option value="oven_repair">Oven Repair</option>
+                                <option value="cooktop_repair">Cooktop Repair</option>
+                                <option value="dishwasher_repair">Dishwasher Repair</option>
+                                <option value="wine_cooler_repair">Wine Cooler Repair</option>
+                                <option value="microwave_repair">Microwave Repair</option>
+                                <option value="refrigerator_repair">Refrigerator Repair</option>
+                                <option value="hood_vent_repair">Hood Vent Repair</option>
+                                <option value="installation">Installation</option>
+                                <option value="maintenance">Maintenance Service</option>
+                                <option value="multiple_appliances">Multiple Appliances</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span id="subjectError" class="error-message">Please select a subject.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" placeholder="Your Message" required aria-describedby="messageError" aria-required="true"></textarea>
+                            <span id="messageError" class="error-message">Please enter your message.</span>
+                        </div>
+                        <button type="submit" class="form-button" aria-label="Submit contact form">Send Message</button>
+                    </form>
                 </div>
             </section>
         </main>
