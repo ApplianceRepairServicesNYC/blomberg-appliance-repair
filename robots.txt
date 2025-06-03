@@ -1,1 +1,1 @@
-User-agent: * Allow: / Sitemap: https://blombergappliancerepairnyc.com/sitemap.xml
+User-agent: * Disallow:
